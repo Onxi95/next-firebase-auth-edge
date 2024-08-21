@@ -1,4 +1,5 @@
 export const serverConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
   cookieName: process.env.AUTH_COOKIE_NAME!,
   cookieSignatureKeys: [process.env.AUTH_COOKIE_SIGNATURE_KEY_CURRENT!, process.env.AUTH_COOKIE_SIGNATURE_KEY_PREVIOUS!],
   cookieSerializeOptions: {

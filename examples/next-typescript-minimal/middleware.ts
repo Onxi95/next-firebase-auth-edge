@@ -8,6 +8,7 @@ export async function middleware(request: NextRequest) {
   return authMiddleware(request, {
     loginPath: "/api/login",
     logoutPath: "/api/logout",
+    refreshTokenPath: "/api/refresh",
     apiKey: clientConfig.apiKey,
     cookieName: serverConfig.cookieName,
     cookieSignatureKeys: serverConfig.cookieSignatureKeys,
@@ -50,5 +51,6 @@ export const config = {
     "/((?!_next|api|.*\\.).*)",
     "/api/login",
     "/api/logout",
+    "/api/refresh",
   ],
 };
